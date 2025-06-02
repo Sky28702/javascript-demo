@@ -58,6 +58,7 @@ function getData() {
       adults.push(data);
     }
   });
+  console.log(" ");
   if (adults.length === 0) {
     console.log("Conclusion: No one is adult !");
   } else if (adults.length === 1) {
