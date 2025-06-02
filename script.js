@@ -7,21 +7,21 @@ const Arrays = [
     firstName: "Prateek",
     lastName: "Rai",
     email: "prateekrai462@outlook.com",
-    age: 19,
+    age: 18,
   },
   {
     id: 2,
     firstName: "San",
     lastName: "Jaya",
     email: "xyz@outlook.com",
-    age: 37,
+    age: 18,
   },
   {
     id: 3,
     firstName: "sima",
     lastName: "Jaya",
     email: "xyz@outlook.com",
-    age: 13,
+    age: 12,
   },
   {
     id: 4,
@@ -58,9 +58,18 @@ function getData() {
       adults.push(data);
     }
   });
-  adults.forEach(function (data, index) {
-    console.log(index + 1 + ". " + data.firstName + " is an adult");
-  });
+  if (adults.length === 0) {
+    console.log("Conclusion: No one is adult !");
+  } else if (adults.length === 1) {
+    console.log("Conclusion: Only " + adults[0].firstName + " is adult !");
+  } else {
+    console.log(
+      "Conclusion: " +
+        adults[0].firstName +
+        " and " +
+        adults[1].firstName +
+        " are adult !"
+    );
+  }
 }
-
 getData();
