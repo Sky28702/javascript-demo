@@ -18,9 +18,6 @@ const Arrays = [
   },
 ];
 
-console.log(Arrays);
-console.log(Arrays[0]);
-
 /* For each loop*/
 
 function getData() {
@@ -37,3 +34,4 @@ function getData() {
     );
   });
 }
+getData();
