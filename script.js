@@ -1,17 +1,3 @@
-/* array */
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(array);
-console.log(array[4]);
-
-/* Objects */
-let Pc = {
-  Ram: "8GB",
-  CPU: "12 Cores",
-  Graphics_Card: "3050 RTX",
-  OS: "Windows",
-};
-console.log(Pc.CPU, Pc.Graphics_Card);
-
 /* Array of objects*/
 
 const Arrays = [
@@ -36,15 +22,18 @@ console.log(Arrays);
 console.log(Arrays[0]);
 
 /* For each loop*/
-Arrays.forEach(function (data, index) {
-  console.log(
-    index +
-      1 +
-      ". My name is  " +
-      data.firstName +
-      data.lastName +
-      " and i am " +
-      data.age +
-      " years old."
-  );
-});
+
+function getData() {
+  Arrays.forEach(function (data, index) {
+    console.log(
+      index +
+        1 +
+        ". My name is  " +
+        data.firstName +
+        data.lastName +
+        " and i am " +
+        data.age +
+        " years old."
+    );
+  });
+}
