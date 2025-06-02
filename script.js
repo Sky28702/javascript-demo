@@ -39,6 +39,7 @@ console.log(Arrays[0]);
 Arrays.forEach(function (data, index) {
   console.log(
     index +
+      1 +
       ". My name is  " +
       data.firstName +
       data.lastName +
