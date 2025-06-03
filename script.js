@@ -35,21 +35,16 @@ function leaveDate() {
     }
   });
 
-  if (adults.length > 1) {
-    let fname = adults.map((adults) => adults.firstName);
-    console.log(` `);
-    console.log(
-      fname.slice(0, -1).join(` , `) +
-        ` and ` +
-        adults[adults.length - 1].firstName +
-        `are` +
-        ` adults.`
-    );
-  } else if (adults.length === 0) {
-    console.log(`no adults found`);
-  } else if (adults.length === 1) {
-    let fname = adults.map((adults) => adults.firstName);
-    console.log(fname + ` is` + ` adult.`);
-  }
+  let fname = adults.map((adults) => adults.firstName);
+
+  const lastName = fname[fname.length - 1];
+
+  const startingNames = fname.slice(0, -1);
+
+  const startingNameList = startingNames.join(", ");
+
+  const finalNameList = startingNameList + " and " + lastName;
+
+  console.log(finalNameList + " are adults !");
 }
 leaveDate();
