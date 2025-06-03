@@ -1,76 +1,49 @@
-/* Array of objects */
-let adults = [];
-
-const Arrays = [
+/*Arrays of objects*/
+const people = [
   {
-    id: 1,
-    firstName: "Prateek",
-    lastName: "Rai",
-    email: "prateekrai462@outlook.com",
-    age: 18,
+    firstName: `Sky`,
+    age: 24,
   },
   {
-    id: 2,
-    firstName: "San",
-    lastName: "Jaya",
-    email: "xyz@outlook.com",
-    age: 18,
+    firstName: `Biohazard`,
+    age: 27,
   },
   {
-    id: 3,
-    firstName: "sima",
-    lastName: "Jaya",
-    email: "xyz@outlook.com",
+    firstName: `Dream`,
+    age: 13,
+  },
+  {
+    firstName: `Axeman`,
+    age: 39,
+  },
+  {
+    firstName: `Spooky`,
     age: 12,
-  },
-  {
-    id: 4,
-    firstName: "son",
-    lastName: "Jaya",
-    email: "xyz@outlook.com",
-    age: 12,
-  },
-  {
-    id: 5,
-    firstName: "Siya",
-    lastName: "ioya",
-    email: "xyz@outlook.com",
-    age: 14,
   },
 ];
 
-/* For each loop */
-function getData() {
-  Arrays.forEach(function (data, index) {
+/*empty array for adults */
+let adults = [];
+/*for each loop */
+function leaveDate() {
+  people.forEach(function (data, index) {
     console.log(
-      index +
-        1 +
-        ". My name is " +
-        data.firstName +
-        " " +
-        data.lastName +
-        " and I am " +
-        data.age +
-        " years old."
+      index + ` I am ` + data.firstName + ` and my age is ` + data.age + `.`
     );
-
-    if (data.age >= 18) {
+    if (data.age > 18) {
       adults.push(data);
     }
   });
-  console.log(" ");
-  if (adults.length === 0) {
-    console.log("Conclusion: No one is adult !");
-  } else if (adults.length === 1) {
-    console.log("Conclusion: Only " + adults[0].firstName + " is adult !");
-  } else {
+  if (adults.length > 0) {
+    let fname = adults.map((adults) => adults.firstName);
+    console.log(` `);
     console.log(
-      "Conclusion: " +
-        adults[0].firstName +
-        " and " +
-        adults[1].firstName +
-        " are adult !"
+      fname.slice(0, -1).join(` , `) +
+        ` and ` +
+        adults[adults.length - 1].firstName
     );
+  } else {
+    console.log(`no adults found`);
   }
 }
-getData();
+leaveDate();
