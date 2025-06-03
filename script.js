@@ -6,7 +6,7 @@ const people = [
   },
   {
     firstName: `Biohazard`,
-    age: 27,
+    age: 17,
   },
   {
     firstName: `Dream`,
@@ -14,7 +14,7 @@ const people = [
   },
   {
     firstName: `Axeman`,
-    age: 39,
+    age: 16,
   },
   {
     firstName: `Spooky`,
@@ -34,16 +34,22 @@ function leaveDate() {
       adults.push(data);
     }
   });
-  if (adults.length > 0) {
+
+  if (adults.length > 1) {
     let fname = adults.map((adults) => adults.firstName);
     console.log(` `);
     console.log(
       fname.slice(0, -1).join(` , `) +
         ` and ` +
-        adults[adults.length - 1].firstName
+        adults[adults.length - 1].firstName +
+        `are` +
+        ` adults.`
     );
-  } else {
+  } else if (adults.length === 0) {
     console.log(`no adults found`);
+  } else if (adults.length === 1) {
+    let fname = adults.map((adults) => adults.firstName);
+    console.log(fname + ` is` + ` adult.`);
   }
 }
 leaveDate();
